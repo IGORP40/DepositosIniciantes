@@ -1,0 +1,15 @@
+valor = int(input('Qual valor foi inserido? '))
+if valor != 0:
+    resposta = str(input('Cachaça ou Cigarro? [CA/CI] ')).upper()
+    print('Voce tem {} de credito'.format(valor - 1))
+    while valor > 0:
+        if valor > 0 and resposta == 'CI':
+            valor -= 1
+            print('Dar 2 cigarros')
+        if valor > 0 and resposta == 'CA':
+            valor -= 1
+            print('Dar 1 dose de cachaça')
+        if valor <= 0:
+            valor = int(input('Qual valor foi inserido? '))
+        resposta = str(input('Cachaça ou Cigarro? [CA/CI] ')).upper()
+        print('Voce tem {} de credito'.format(valor - 1))
